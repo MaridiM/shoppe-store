@@ -1,0 +1,5 @@
+export { LogoSVG } from './Logo'
+export { HeartSVG } from './Heart'
+export { UserSVG } from './User'
+export { SearchSVG } from './Search'
+export { ShoppingCartSVG } from './ShoppingCart'
