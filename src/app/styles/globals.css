@@ -2,29 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
-    @font-face {
-        font-family: 'DM Sans Regular';
-        src: url('../../shared//assets/fonts/DM_Sans/DMSans-Regular.ttf');
-        font-weight: 400;
-    }
-    @font-face {
-        font-family: 'DM Sans Medium';
-        src: url('../../shared//assets/fonts/DM_Sans/DMSans-Medium.ttf');
-        font-weight: 500;
-    }
-    @font-face {
-        font-family: 'DM Sans Bold';
-        src: url('../../shared//assets/fonts/DM_Sans/DMSans-Bold.ttf');
-        font-weight: 700;
-    }
-    @font-face {
-        font-family: 'Allerta Stencil';
-        src: url('../../shared//assets/fonts/Allerta_Stencil/AllertaStencil-Regular.ttf');
-    }
-    
-    :root {
+  @font-face {
+    font-family: 'DM Sans Regular';
+    src: url('../../shared//assets/fonts/DM_Sans/DMSans-Regular.ttf');
+    font-weight: 400;
+  }
+  @font-face {
+    font-family: 'DM Sans Medium';
+    src: url('../../shared//assets/fonts/DM_Sans/DMSans-Medium.ttf');
+    font-weight: 500;
+  }
+  @font-face {
+    font-family: 'DM Sans Bold';
+    src: url('../../shared//assets/fonts/DM_Sans/DMSans-Bold.ttf');
+    font-weight: 700;
+  }
+  @font-face {
+    font-family: 'Allerta Stencil';
+    src: url('../../shared//assets/fonts/Allerta_Stencil/AllertaStencil-Regular.ttf');
+  }
+
+  :root {
     --background: 0 0% 100%;
     --white: 0 0% 100%;
     --black: 0 0% 0%;
@@ -34,11 +33,11 @@
     --light-gray: 0 0% 94%;
     --dark-gray: 0 0% 44%;
 
-    --font-family: "DM Sans Regular", sans-serif;
-    --second-family: "Allerta Stencil", sans-serif;
-}
+    --font-family: 'DM Sans Regular', sans-serif;
+    --second-family: 'Allerta Stencil', sans-serif;
+  }
 
-.dark {
+  .dark {
     --background: 0 0% 0%;
     --white: 0, 0% 98%;
     --accent: 34 23% 64%;
@@ -47,13 +46,12 @@
     --gray: 0 0% 24%;
     --light-gray: 0 0%, 60%;
     --dark-gray: 0 0% 15%;
-}
-
+  }
 }
 
 @layer base {
-    * {
-        box-sizing: border-box;
-        font-family: var(--font-family);
-    }
+  * {
+    box-sizing: border-box;
+    font-family: var(--font-family);
+  }
 }
