@@ -1,0 +1,10 @@
+.splide__pagination__page {
+  background: #fff;
+  height: 10px;
+  width: 10px;
+}
+
+.splide__pagination__page.is-active {
+  background: transparent;
+  border: 1px solid #fff;
+}
