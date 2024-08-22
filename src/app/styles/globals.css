@@ -24,28 +24,28 @@
   }
 
   :root {
-    --background: 0 0% 100%;
-    --white: 0 0% 100%;
-    --black: 0 0% 0%;
-    --errors: 0 89% 42%;
-    --accent: 34 22% 58%;
-    --gray: 0 0% 85%;
-    --light-gray: 0 0% 94%;
-    --dark-gray: 0 0% 44%;
+    --background: #ffffff;
+    --white: #fff;
+    --black: #000;
+    --errors: #d82700;
+    --accent: #a18a68;
+    --gray: #d8d8d8;
+    --light-gray: #efefef;
+    --dark-gray: #707070;
 
     --font-family: 'DM Sans Regular', sans-serif;
     --second-family: 'Allerta Stencil', sans-serif;
   }
 
   .dark {
-    --background: 0 0% 0%;
-    --white: 0, 0% 98%;
-    --accent: 34 23% 64%;
-    --errors: 0 89% 42%;
-    --black: 0 0% 4%;
-    --gray: 0 0% 24%;
-    --light-gray: 0 0%, 60%;
-    --dark-gray: 0 0% 15%;
+    --background: #ffffff;
+    --white: #fbfbfb;
+    --accent: #b4a186;
+    --errors: #ca0c0c;
+    --black: #0a0a0a;
+    --gray: #3d3d3d;
+    --light-gray: #999999;
+    --dark-gray: #262626;
   }
 }
 
