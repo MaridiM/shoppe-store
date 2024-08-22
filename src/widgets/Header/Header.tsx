@@ -11,7 +11,9 @@ const Header: FC<IProps> = ({}) => {
     return (
         <header className='flex justify-between items-end bg-blackw-full h-[108px] border-b-2 border-b-light-gray mb-4'>
             <div className='pb-[14px]'>
-                <LogoSVG width={129} height={27} />
+                <Link href={paths.home}>
+                    <LogoSVG width={129} height={27} />
+                </Link>
             </div>
             <nav className='flex items-end gap-x-12'>
                 <ul className='flex items-end gap-x-4'>

@@ -26,14 +26,14 @@
     
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --white: 0 0% 100%;
-    --black: 0 0% 0%;
-    --errors: 0 89% 42%;
-    --accent: 34 22% 58%;
-    --gray: 0 0% 85%;
-    --light-gray: 0 0% 94%;
-    --dark-gray: 0 0% 44%;
+    --background: #ffffff;
+    --white: #fff;
+    --black: #000;
+    --errors: #d82700;
+    --accent: #a18a68;
+    --gray: #d8d8d8;
+    --light-gray: #efefef;
+    --dark-gray: #707070;
 
     --font-family: 'DM Sans Regular', sans-serif;
     --second-family: 'Allerta Stencil', sans-serif;
