@@ -30,10 +30,43 @@ const config = {
         white: 'hsl(var(--white))',
         black: 'hsl(var(--black))',
         errors: 'hsl(var(--errors))',
-        accent: 'hsl(var(--accent))',
         gray: 'hsl(var(--gray))',
         'light-gray': 'hsl(var(--light-gray))',
         'dark-gray': 'hsl(var(--dark-gray))',
+
+        
+        border: 'hsl(var(--border))',
+        input: 'hsl(var(--input))',
+        ring: 'hsl(var(--ring))',
+        foreground: 'hsl(var(--foreground))',
+        primary: {
+            DEFAULT: 'hsl(var(--primary))',
+            foreground: 'hsl(var(--primary-foreground))',
+        },
+        secondary: {
+            DEFAULT: 'hsl(var(--secondary))',
+            foreground: 'hsl(var(--secondary-foreground))',
+        },
+        destructive: {
+            DEFAULT: 'hsl(var(--destructive))',
+            foreground: 'hsl(var(--destructive-foreground))',
+        },
+        muted: {
+            DEFAULT: 'hsl(var(--muted))',
+            foreground: 'hsl(var(--muted-foreground))',
+        },
+        accent: {
+            DEFAULT: 'hsl(var(--accent))',
+            foreground: 'hsl(var(--accent-foreground))',
+        },
+        popover: {
+            DEFAULT: 'hsl(var(--popover))',
+            foreground: 'hsl(var(--popover-foreground))',
+        },
+        card: {
+            DEFAULT: 'hsl(var(--card))',
+            foreground: 'hsl(var(--card-foreground))',
+        },
       },
       keyframes: {
         "accordion-down": {

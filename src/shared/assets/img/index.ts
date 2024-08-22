@@ -1,0 +1,1 @@
+export { default as gold_big_hoops } from "./slider/gold_big_hoops.jpg";
