@@ -24,10 +24,43 @@ const config = {
         white: 'var(--white)',
         black: 'var(--black)',
         errors: 'var(--errors)',
-        accent: 'var(--accent)',
         gray: 'var(--gray)',
         'light-gray': 'var(--light-gray)',
         'dark-gray': 'var(--dark-gray)',
+
+        
+        border: 'var(--border)',
+        input: 'var(--input)',
+        ring: 'var(--ring)',
+        foreground: 'var(--foreground)',
+        primary: {
+            DEFAULT: 'var(--primary)',
+            foreground: 'var(--primary-foreground)',
+        },
+        secondary: {
+            DEFAULT: 'var(--secondary)',
+            foreground: 'var(--secondary-foreground)',
+        },
+        destructive: {
+            DEFAULT: 'var(--destructive)',
+            foreground: 'var(--destructive-foreground)',
+        },
+        muted: {
+            DEFAULT: 'var(--muted)',
+            foreground: 'var(--muted-foreground)',
+        },
+        accent: {
+            DEFAULT: 'var(--accent)',
+            foreground: 'hsl(var(--accent-foreground)',
+        },
+        popover: {
+            DEFAULT: 'var(--popover)',
+            foreground: 'var(--popover-foreground)',
+        },
+        card: {
+            DEFAULT: 'var(--card)',
+            foreground: 'var(--card-foreground)',
+        },
       },
       keyframes: {
         'accordion-down': {
