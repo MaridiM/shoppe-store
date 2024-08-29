@@ -1,5 +1,9 @@
-export { LogoSVG } from './Logo'
-export { HeartSVG } from './Heart'
-export { UserSVG } from './User'
-export { SearchSVG } from './Search'
-export { ShoppingCartSVG } from './ShoppingCart'
+export { LogoSVG } from './Logo';
+export { HeartSVG } from './Heart';
+export { UserSVG } from './User';
+export { SearchSVG } from './Search';
+export { ShoppingCartSVG } from './ShoppingCart';
+export { LinkedinSVG } from './Linkedin';
+export { FacebookSVG } from './Facebook';
+export { InstagramSVG } from './Instagram';
+export { TwitterSVG } from './Twitter';

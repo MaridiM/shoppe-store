@@ -11,6 +11,7 @@ export const paths = {
     profile: '/profile',
     checkout: '/checkout',
     contact: '/contact',
+    term: '/term-of-services',
     orderConfirmation: '/order-confirmation',
     posts: (id?: string) =>  id ? `/posts/${id}` : '/posts',
     products: (id?: string) =>  id ? `/products/${id}` : '/products',
