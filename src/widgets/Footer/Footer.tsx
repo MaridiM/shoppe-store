@@ -16,12 +16,12 @@ const Footer: FC<IProps> = () => {
             <div>
                 <ul className='flex gap-x-10'>
                     <li>
-                        <Link href={'#'} className='leading-[1.69]'>
+                        <Link href={paths.contact} className='leading-[1.69]'>
                             CONTACT
                         </Link>
                     </li>
                     <li>
-                        <Link href={'#'} className='leading-[1.69]'>
+                        <Link href={paths.term} className='leading-[1.69]'>
                             TERMS OF SERVICES
                         </Link>
                     </li>
@@ -33,11 +33,11 @@ const Footer: FC<IProps> = () => {
                 </ul>
                 <p className='mt-12'>
                     © 2021 Shelly.{' '}
-                    <Link href='#' className='text-dark-gray'>
+                    <Link href={paths.term} className='text-dark-gray'>
                         Terms of use
                     </Link>{' '}
                     and
-                    <Link href='#' className='text-dark-gray'>
+                    <Link href={paths.term} className='text-dark-gray'>
                         privacy policy.
                     </Link>
                 </p>
