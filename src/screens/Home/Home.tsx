@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { FC } from 'react';
-import { Header } from '@/widgets';
+import { Footer, Header } from '@/widgets';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import { Button } from '@/shared/components';
 import { Eye, Heart, ShoppingCart } from 'lucide-react';
@@ -24,7 +24,7 @@ interface IProps {}
 
 const HomePage: FC<IProps> = ({}) => {
     return (
-        <div className='flex-1 m-auto max-w-[1280px] px-4'>
+        <div className='flex-1 m-auto max-w-[1280px] px-4 pt-12 pb-24'>
             <Header />
 
             <Splide
@@ -225,6 +225,7 @@ const HomePage: FC<IProps> = ({}) => {
                     </div>
                 </div>
             </section>
+            <Footer />
         </div>
     );
 };
