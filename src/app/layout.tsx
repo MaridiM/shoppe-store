@@ -1,6 +1,9 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import { Footer, Header } from '@/widgets';
+
 import './styles/globals.css';
+import { cn } from '@/shared/lib/utils';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -16,8 +19,12 @@ export default function RootLayout({
 }>) {
     return (
         <html lang='en'>
-            <body className={inter.className}>
-                <main className='min-h-screen'>{children}</main>
+            <body className={cn('not-scroll', inter.className)}>
+                <main className='flex flex-col min-h-screen py-12 px-4 m-auto max-w-[1280px] not-scroll'>
+                    <Header />
+                    {children}
+                    <Footer />
+                </main>
             </body>
         </html>
     );

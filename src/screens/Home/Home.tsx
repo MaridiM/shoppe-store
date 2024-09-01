@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { FC } from 'react';
 import { Footer, Header } from '@/widgets';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
-import { Button } from '@/shared/components';
+import { Button, Container } from '@/shared/components';
 import { Eye, Heart, ShoppingCart } from 'lucide-react';
 import {
     gold_big_hoops,
@@ -24,9 +24,7 @@ interface IProps {}
 
 const HomePage: FC<IProps> = ({}) => {
     return (
-        <div className='flex-1 m-auto max-w-[1280px] px-4 pb-24'>
-            <Header />
-
+        <Container className='flex-col'>
             <Splide
                 tag='section'
                 options={{
@@ -225,8 +223,7 @@ const HomePage: FC<IProps> = ({}) => {
                     </div>
                 </div>
             </section>
-            <Footer />
-        </div>
+        </Container>
     );
 };
 

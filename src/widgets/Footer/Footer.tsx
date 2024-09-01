@@ -12,7 +12,7 @@ interface IProps {}
 
 const Footer: FC<IProps> = () => {
     return (
-        <footer className='flex justify-between items-end border-t-2 border-t-light-gray mt-[250px] h-40'>
+        <footer className='flex justify-between items-end border-t-2 border-t-light-gray h-40'>
             <div>
                 <ul className='flex gap-x-10'>
                     <li>
