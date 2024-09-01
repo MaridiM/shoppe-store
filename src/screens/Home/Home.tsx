@@ -24,7 +24,7 @@ interface IProps {}
 
 const HomePage: FC<IProps> = ({}) => {
     return (
-        <div className='flex-1 m-auto max-w-[1280px] px-4 pt-12 pb-24'>
+        <div className='flex-1 m-auto max-w-[1280px] px-4 pb-24'>
             <Header />
 
             <Splide

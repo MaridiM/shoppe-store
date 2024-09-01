@@ -9,7 +9,7 @@ const Header: FC<IProps> = ({}) => {
     const isAuth = false;
 
     return (
-        <header className='flex justify-between items-end bg-blackw-full h-[42px] border-b-2 border-b-light-gray mb-4'>
+        <header className='flex justify-between items-end bg-blackw-full h-[42px] border-b-2 border-b-light-gray mb-4 mt-12'>
             <div className='pb-[14px]'>
                 <Link href={paths.home}>
                     <LogoSVG width={129} height={27} />
