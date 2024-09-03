@@ -1,32 +1,25 @@
 'use client';
 
 import { useAppContext } from '@/context';
+import { useProductActions } from '@/hooks';
 import Image, { StaticImageData } from 'next/image';
 import { Button } from '@/shared/components';
 import { Eye, Heart, ShoppingCart } from 'lucide-react';
 
-import { FC, useEffect, useState } from 'react';
+import { FC } from 'react';
 
 interface IProps {
-    id: Number;
+    id: number;
     img: StaticImageData;
-    title: String;
-    price: Number;
+    title: string;
+    price: number;
 }
 
 const ProductCard: FC<IProps> = ({ id, img, title, price }) => {
-    const { cart, setCart } = useAppContext();
-    const [added, setAdded] = useState(false);
+    const { cart, setCart, favorited, setFavorited } = useAppContext();
 
-    const addRemoveProduct = () => {
-        if (!cart.some((item) => item.id === id)) {
-            setCart((prev) => [...prev, { id, title, price }]);
-            setAdded(true);
-        } else {
-            setCart((prev) => prev.filter((item) => item.id !== id));
-            setAdded(false);
-        }
-    };
+    const addRemoveProduct = useProductActions(id, img, title, price, cart, setCart);
+    const addRemoveFavorite = useProductActions(id, img, title, price, favorited, setFavorited);
 
     return (
         <div className='max-w-[380px] w-full'>
@@ -35,15 +28,26 @@ const ProductCard: FC<IProps> = ({ id, img, title, price }) => {
                 <div className='absolute rounded-lg inset-0 flex items-center justify-center gap-x-[30px] opacity-0 bg-light-gray hover:opacity-60 shadow-md transition-opacity duration-300 group-hover:opacity-60'>
                     <Button onClick={addRemoveProduct} variant='icon' size='auto'>
                         <ShoppingCart
-                            className={added ? 'fill-black' : 'fill-transparent'}
+                            className={
+                                cart.some((item) => item.id === id)
+                                    ? 'fill-black'
+                                    : 'fill-transparent'
+                            }
                             size={25}
                         />
                     </Button>
                     <Button variant='icon' size='auto'>
                         <Eye size={30} />
                     </Button>
-                    <Button variant='icon' size='auto'>
-                        <Heart size={25} />
+                    <Button onClick={addRemoveFavorite} variant='icon' size='auto'>
+                        <Heart
+                            className={
+                                favorited.some((item) => item.id === id)
+                                    ? 'fill-black'
+                                    : 'fill-transparent'
+                            }
+                            size={25}
+                        />
                     </Button>
                 </div>
             </div>
