@@ -1,6 +1,5 @@
 import { FC } from 'react';
 import Link from 'next/link';
-import { Footer, Header } from '@/widgets';
 import { paths } from '@/shared/config/roures';
 import {
     Button,

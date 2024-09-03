@@ -1,12 +1,11 @@
 'use client';
 
+import { v4 as uuidv4 } from 'uuid';
 import Link from 'next/link';
 import Image from 'next/image';
 import { FC } from 'react';
-import { Footer, Header } from '@/widgets';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
-import { Button, Container } from '@/shared/components';
-import { Eye, Heart, ShoppingCart } from 'lucide-react';
+import { Container } from '@/shared/components';
 import {
     gold_big_hoops,
     img_01,
@@ -17,10 +16,21 @@ import {
     img_06,
 } from '@/shared/assets/img';
 
+import { ProductCard } from '@/widgets';
+
 import '@splidejs/react-splide/css';
 import './Home.css';
 
 interface IProps {}
+
+const products = [
+    { id: 1, img: img_01, title: 'Lira Earrings', price: 20 },
+    { id: 2, img: img_02, title: 'Lira Earrings', price: 30 },
+    { id: 3, img: img_03, title: 'Lira Earrings', price: 20 },
+    { id: 4, img: img_04, title: 'Lira Earrings', price: 20.43 },
+    { id: 5, img: img_05, title: 'Lira Earrings', price: 20 },
+    { id: 6, img: img_06, title: 'Lira Earrings', price: 20 },
+];
 
 const HomePage: FC<IProps> = ({}) => {
     return (
@@ -42,6 +52,7 @@ const HomePage: FC<IProps> = ({}) => {
                         className='max-h-full object-cover object-top'
                         src={gold_big_hoops}
                         alt='img'
+                        priority={true}
                     />
                     <div className='absolute top-56 left-10'>
                         <h1 className='mb-4 font-medium text-[33px] leading-[1.3] text-white'>
@@ -60,6 +71,7 @@ const HomePage: FC<IProps> = ({}) => {
                         className='max-h-full object-cover object-top'
                         src={gold_big_hoops}
                         alt='img'
+                        priority={true}
                     />
                     <div className='absolute top-56 left-10'>
                         <h1 className='mb-4 font-medium text-[33px] leading-[1.3] text-white'>
@@ -78,6 +90,7 @@ const HomePage: FC<IProps> = ({}) => {
                         className='max-h-full object-cover object-top'
                         src={gold_big_hoops}
                         alt='img'
+                        priority={true}
                     />
                     <div className='absolute top-56 left-10'>
                         <h1 className='mb-4 font-medium text-[33px] leading-[1.3] text-white'>
@@ -101,126 +114,9 @@ const HomePage: FC<IProps> = ({}) => {
                     </Link>
                 </div>
                 <div className='flex justify-center flex-wrap mt-10 gap-y-[86px] gap-x-[54px]'>
-                    <div className='max-w-[380px] w-full'>
-                        <div className='relative group rounded-lg cursor-pointer'>
-                            <Image src={img_01} alt='product' />
-                            <div className='absolute rounded-lg inset-0 flex items-center justify-center gap-x-[30px] opacity-0 bg-light-gray hover:opacity-60 shadow-md transition-opacity duration-300 group-hover:opacity-60'>
-                                <Button variant='icon' size='auto'>
-                                    <ShoppingCart size={25} />
-                                </Button>
-                                <Button variant='icon' size='auto'>
-                                    <Eye size={30} />
-                                </Button>
-                                <Button variant='icon' size='auto'>
-                                    <Heart size={25} />
-                                </Button>
-                            </div>
-                        </div>
-                        <h2 className='mt-6 text-xl leading-[1.3]'>Lira Earrings</h2>
-                        <span className='inline-block text-xl mt-4 font-medium text-accent leading-[1.3] capitalize'>
-                            $ 20,00
-                        </span>
-                    </div>
-                    <div className='max-w-[380px] w-full'>
-                        <div className='relative group rounded-lg cursor-pointer'>
-                            <Image src={img_02} alt='product' />
-                            <div className='absolute rounded-lg inset-0 flex items-center justify-center gap-x-[30px] opacity-0 bg-light-gray hover:opacity-60 shadow-md transition-opacity duration-300 group-hover:opacity-60'>
-                                <Button variant='icon' size='auto'>
-                                    <ShoppingCart size={25} />
-                                </Button>
-                                <Button variant='icon' size='auto'>
-                                    <Eye size={30} />
-                                </Button>
-                                <Button variant='icon' size='auto'>
-                                    <Heart size={25} />
-                                </Button>
-                            </div>
-                        </div>
-                        <h2 className='mt-6 text-xl leading-[1.3]'>Lira Earrings</h2>
-                        <span className='inline-block text-xl mt-4 font-medium text-accent leading-[1.3] capitalize'>
-                            $ 20,00
-                        </span>
-                    </div>
-                    <div className='max-w-[380px] w-full'>
-                        <div className='relative group rounded-lg cursor-pointer'>
-                            <Image src={img_03} alt='product' />
-                            <div className='absolute rounded-lg inset-0 flex items-center justify-center gap-x-[30px] opacity-0 bg-light-gray hover:opacity-60 shadow-md transition-opacity duration-300 group-hover:opacity-60'>
-                                <Button variant='icon' size='auto'>
-                                    <ShoppingCart size={25} />
-                                </Button>
-                                <Button variant='icon' size='auto'>
-                                    <Eye size={30} />
-                                </Button>
-                                <Button variant='icon' size='auto'>
-                                    <Heart size={25} />
-                                </Button>
-                            </div>
-                        </div>
-                        <h2 className='mt-6 text-xl leading-[1.3]'>Lira Earrings</h2>
-                        <span className='inline-block text-xl mt-4 font-medium text-accent leading-[1.3] capitalize'>
-                            $ 20,00
-                        </span>
-                    </div>
-                    <div className='max-w-[380px] w-full'>
-                        <div className='relative group rounded-lg cursor-pointer'>
-                            <Image src={img_04} alt='product' />
-                            <div className='absolute rounded-lg inset-0 flex items-center justify-center gap-x-[30px] opacity-0 bg-light-gray hover:opacity-60 shadow-md transition-opacity duration-300 group-hover:opacity-60'>
-                                <Button variant='icon' size='auto'>
-                                    <ShoppingCart size={25} />
-                                </Button>
-                                <Button variant='icon' size='auto'>
-                                    <Eye size={30} />
-                                </Button>
-                                <Button variant='icon' size='auto'>
-                                    <Heart size={25} />
-                                </Button>
-                            </div>
-                        </div>
-                        <h2 className='mt-6 text-xl leading-[1.3]'>Lira Earrings</h2>
-                        <span className='inline-block text-xl mt-4 font-medium text-accent leading-[1.3] capitalize'>
-                            $ 20,00
-                        </span>
-                    </div>
-                    <div className='max-w-[380px] w-full'>
-                        <div className='relative group rounded-lg cursor-pointer'>
-                            <Image src={img_05} alt='product' />
-                            <div className='absolute rounded-lg inset-0 flex items-center justify-center gap-x-[30px] opacity-0 bg-light-gray hover:opacity-60 shadow-md transition-opacity duration-300 group-hover:opacity-60'>
-                                <Button variant='icon' size='auto'>
-                                    <ShoppingCart size={25} />
-                                </Button>
-                                <Button variant='icon' size='auto'>
-                                    <Eye size={30} />
-                                </Button>
-                                <Button variant='icon' size='auto'>
-                                    <Heart size={25} />
-                                </Button>
-                            </div>
-                        </div>
-                        <h2 className='mt-6 text-xl leading-[1.3]'>Lira Earrings</h2>
-                        <span className='inline-block text-xl mt-4 font-medium text-accent leading-[1.3] capitalize'>
-                            $ 20,00
-                        </span>
-                    </div>
-                    <div className='max-w-[380px] w-full'>
-                        <div className='relative group rounded-lg cursor-pointer'>
-                            <Image src={img_06} alt='product' />
-                            <div className='absolute rounded-lg inset-0 flex items-center justify-center gap-x-[30px] opacity-0 bg-light-gray hover:opacity-60 shadow-md transition-opacity duration-300 group-hover:opacity-60'>
-                                <Button variant='icon' size='auto'>
-                                    <ShoppingCart size={25} />
-                                </Button>
-                                <Button variant='icon' size='auto'>
-                                    <Eye size={30} />
-                                </Button>
-                                <Button variant='icon' size='auto'>
-                                    <Heart size={25} />
-                                </Button>
-                            </div>
-                        </div>
-                        <h2 className='mt-6 text-xl leading-[1.3]'>Lira Earrings</h2>
-                        <span className='inline-block text-xl mt-4 font-medium text-accent leading-[1.3] capitalize'>
-                            $ 20,00
-                        </span>
-                    </div>
+                    {products.map((item) => (
+                        <ProductCard key={item.id} {...item} />
+                    ))}
                 </div>
             </section>
         </Container>

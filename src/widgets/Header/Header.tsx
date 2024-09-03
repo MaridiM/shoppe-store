@@ -1,12 +1,21 @@
+'use client';
+
 import Link from 'next/link';
-import { LogoSVG, SearchSVG, HeartSVG, ShoppingCartSVG, UserSVG } from '@/shared/assets/icons';
+import { FC, useEffect } from 'react';
+import { ShoppingCart } from 'lucide-react';
+
+import { useAppContext } from '@/context';
+import { LogoSVG, SearchSVG, HeartSVG, UserSVG } from '@/shared/assets/icons';
+
 import { paths } from '@/shared/config/roures';
-import { FC } from 'react';
 
 interface IProps {}
 
 const Header: FC<IProps> = ({}) => {
+    const { cart, setCart } = useAppContext();
     const isAuth = false;
+
+    useEffect(() => {}, []);
 
     return (
         <header className='flex justify-between items-end w-full h-[42px] border-b-2 border-b-light-gray mb-4'>
@@ -54,9 +63,17 @@ const Header: FC<IProps> = ({}) => {
                     <li className='border-transparent hover:border-black transition-all delay-150 ease-in-out border-b-2 w-14 h-14'>
                         <Link
                             href={paths.shoppingCart}
-                            className='cursor-default w-full h-full flex justify-center items-center'
+                            className='cursor-default w-full h-full flex justify-center items-center gap-3'
                         >
-                            <ShoppingCartSVG width={20} height={20} />
+                            <ShoppingCart
+                                size={20}
+                                className={cart.length ? 'fill-black' : 'fill-transparent'}
+                            />
+                            {cart.length !== 0 && (
+                                <div className='relative bg-black text-white rounded-md w-4 h-4 flex justify-center items-center'>
+                                    <span className='text-xs font-bold'>{cart.length}</span>
+                                </div>
+                            )}
                         </Link>
                     </li>
                     <li className='border-transparent hover:border-black transition-all delay-150 ease-in-out border-b-2 w-14 h-14'>
