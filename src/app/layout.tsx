@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+
 import { Footer, Header } from '@/widgets';
+import { AppContextProvider } from '@/context';
 
 import './styles/globals.css';
 import { cn } from '@/shared/lib/utils';
@@ -18,14 +20,16 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang='en'>
-            <body className={cn('not-scroll', inter.className)}>
-                <main className='flex flex-col min-h-screen py-12 px-4 m-auto max-w-[1280px] not-scroll'>
-                    <Header />
-                    {children}
-                    <Footer />
-                </main>
-            </body>
-        </html>
+        <AppContextProvider>
+            <html lang='en'>
+                <body className={cn('not-scroll', inter.className)} suppressHydrationWarning={true}>
+                    <main className='flex flex-col min-h-screen py-12 px-4 m-auto max-w-[1280px]'>
+                        <Header />
+                        {children}
+                        <Footer />
+                    </main>
+                </body>
+            </html>
+        </AppContextProvider>
     );
 }
