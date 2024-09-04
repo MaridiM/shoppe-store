@@ -7,6 +7,7 @@ import {Container} from '@/shared/components';
 
 
 const PrivacyPolisPage: FC = () => {
+    // TODO: Пересмотреть стилизацию по паддингам
     return (
         <Container className=' flex-col  px-[41px] py-[118px] sm:px-[144px] sm:pt-[118px] sm:pb-[96px] xl:px-[300px] xl:pt-[219px] xl:pb-[250px] '>
             <div className=''>
