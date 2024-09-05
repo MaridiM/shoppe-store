@@ -105,7 +105,7 @@ const HomePage: FC<IProps> = ({}) => {
             </Splide>
 
             <section className='mt-16 w-full mx-auto'>
-                <div className='flex justify-between items-center flex-col md:flex-row'>
+                <div className='flex justify-between items-center flex-col lg:flex-row'>
                     <h2 className='text-[33px] font-semibold leading-[1.3] mb-4 md:mb-0 md:text-[48px] md:leading-[1.2]'>
                         Shop The Latest
                     </h2>
@@ -113,7 +113,7 @@ const HomePage: FC<IProps> = ({}) => {
                         View All
                     </Link>
                 </div>
-                <div className='grid gap-8 justify-items-center mt-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-14'>
+                <div className='grid grid-cols-auto-fit-380 justify-center gap-[54px] mt-10'>
                     {products.map((item) => (
                         <ProductCard key={item.id} {...item} />
                     ))}
