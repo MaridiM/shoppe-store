@@ -1,6 +1,5 @@
 'use client';
 
-import { v4 as uuidv4 } from 'uuid';
 import Link from 'next/link';
 import Image from 'next/image';
 import { FC } from 'react';
@@ -40,16 +39,34 @@ const HomePage: FC<IProps> = ({}) => {
                 options={{
                     type: 'loop',
                     arrows: false,
-                    autoplay: true,
+                    // autoplay: true,
                     interval: 5000,
                     speed: 2500,
-                    height: 646,
                 }}
                 aria-label='Homepage Slider'
             >
                 <SplideSlide>
                     <Image
-                        className='max-h-full object-cover object-top'
+                        className='object-cover object-top max-h-full'
+                        src={gold_big_hoops}
+                        alt='img'
+                        priority={true}
+                    />
+                    <div className='absolute top-32 left-10 md:top-56'>
+                        <h1 className='mb-4 font-medium text-2xl leading-[1.3] text-white md:text-[33px]'>
+                            Gold big hoops
+                        </h1>
+                        <p className='mb-12 font-normal text-xl leading-[1.35] text-white md:text-[26px]'>
+                            $ 68,00
+                        </p>
+                        <button className='w-40 h-10 text-base border-2 border-solid border-white text-white rounded-md font-bold md:text-xl md:w-[193px] md:h-[53px]'>
+                            View Product
+                        </button>
+                    </div>
+                </SplideSlide>
+                <SplideSlide>
+                    <Image
+                        className='object-cover object-top max-h-full'
                         src={gold_big_hoops}
                         alt='img'
                         priority={true}
@@ -68,26 +85,7 @@ const HomePage: FC<IProps> = ({}) => {
                 </SplideSlide>
                 <SplideSlide>
                     <Image
-                        className='max-h-full object-cover object-top'
-                        src={gold_big_hoops}
-                        alt='img'
-                        priority={true}
-                    />
-                    <div className='absolute top-56 left-10'>
-                        <h1 className='mb-4 font-medium text-[33px] leading-[1.3] text-white'>
-                            Gold big hoops
-                        </h1>
-                        <p className='mb-12 font-normal text-[26px] leading-[1.35] text-white'>
-                            $ 68,00
-                        </p>
-                        <button className='w-[193px] h-[53px] border-2 border-solid border-white text-white rounded-md text-xl font-bold'>
-                            View Product
-                        </button>
-                    </div>
-                </SplideSlide>
-                <SplideSlide>
-                    <Image
-                        className='max-h-full object-cover object-top'
+                        className='object-cover object-top max-h-full'
                         src={gold_big_hoops}
                         alt='img'
                         priority={true}
@@ -106,14 +104,16 @@ const HomePage: FC<IProps> = ({}) => {
                 </SplideSlide>
             </Splide>
 
-            <section className='mt-16'>
-                <div className='flex justify-between items-center'>
-                    <h2 className='text-[33px] font-semibold leading-[1.3]'>Shop The Latest</h2>
-                    <Link className='text-accent text-xl font-semibol' href={'#'}>
+            <section className='mt-16 w-full mx-auto'>
+                <div className='flex justify-between items-center flex-col md:flex-row'>
+                    <h2 className='text-[33px] font-semibold leading-[1.3] mb-4 md:mb-0 md:text-[48px] md:leading-[1.2]'>
+                        Shop The Latest
+                    </h2>
+                    <Link href={'#'} className='text-accent text-xl font-semibol md:mb-0'>
                         View All
                     </Link>
                 </div>
-                <div className='flex justify-center flex-wrap mt-10 gap-y-[86px] gap-x-[54px]'>
+                <div className='grid gap-8 justify-items-center mt-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-14'>
                     {products.map((item) => (
                         <ProductCard key={item.id} {...item} />
                     ))}
