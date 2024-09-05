@@ -105,11 +105,11 @@ const HomePage: FC<IProps> = ({}) => {
             </Splide>
 
             <section className='mt-16 w-full mx-auto'>
-                <div className='flex justify-between items-center flex-col lg:flex-row'>
+                <div className='flex justify-between items-center flex-col xl:flex-row'>
                     <h2 className='text-[33px] font-semibold leading-[1.3] mb-4 md:mb-0 md:text-[48px] md:leading-[1.2]'>
                         Shop The Latest
                     </h2>
-                    <Link href={'#'} className='text-accent text-xl font-semibol md:mb-0'>
+                    <Link href={'#'} className='text-accent text-xl font-semibold md:mb-0'>
                         View All
                     </Link>
                 </div>
