@@ -1,7 +1,7 @@
-import PrivacyPolisPage from "@/screens/PrivacyPolisPage";
+import PrivacyPolicesPage from "@/screens/PrivacyPolices/PrivacyPolicesPage";
 // TODO: Переделать импорты как это работает в других  страницах. Делаем через index.ts
 
 
-const PrivacyPolis = () => <PrivacyPolisPage />
+const PrivacyPolices = () => <PrivacyPolicesPage />
 
-export default PrivacyPolis;
+export default PrivacyPolices;

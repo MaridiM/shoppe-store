@@ -9,7 +9,8 @@ import {Container} from '@/shared/components';
 const PrivacyPolisPage: FC = () => {
     // TODO: Пересмотреть стилизацию по паддингам
     return (
-        <Container className=' flex-col  px-[41px] py-[118px] sm:px-[144px] sm:pt-[118px] sm:pb-[96px] xl:px-[300px] xl:pt-[219px] xl:pb-[250px] '>
+    
+        <Container className=' flex-col  px-[16px] pt-[39px] pb-[96px] xl:px-[380px] xl:pt-[96px] xl:pb-[250px]'>
             <div className=''>
                 <h1 className='mb-[39px] md:text-center text-xl md:text-h1'>Privacy Policy</h1>
                 <p className='mb-[22px] md:mb-[39px] text-sm md:text-base'>
