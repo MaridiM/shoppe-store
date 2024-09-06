@@ -1,10 +1,10 @@
 'use client';
 
 import Link from 'next/link';
-import { FC, useEffect } from 'react';
+import { FC } from 'react';
 import { ShoppingCart, Heart } from 'lucide-react';
 
-import { useAppContext } from '@/context';
+import { useProductStore } from '@/store';
 import { LogoSVG, SearchSVG, UserSVG } from '@/shared/assets/icons';
 
 import { paths } from '@/shared/config/roures';
@@ -12,7 +12,9 @@ import { paths } from '@/shared/config/roures';
 interface IProps {}
 
 const Header: FC<IProps> = ({}) => {
-    const { cart, favorited } = useAppContext();
+    const cart = useProductStore((state) => state.cart);
+    const favorites = useProductStore((state) => state.favorites);
+
     const isAuth = false;
 
     return (
@@ -57,12 +59,12 @@ const Header: FC<IProps> = ({}) => {
                         >
                             <Heart
                                 size={20}
-                                className={favorited.length ? 'fill-black' : 'fill-transparent'}
+                                className={favorites.length ? 'fill-black' : 'fill-transparent'}
                             />
                         </Link>
-                        {favorited.length > 0 && (
+                        {favorites.length > 0 && (
                             <div className='absolute top-5 -right-1 bg-black text-white rounded-md w-4 h-4 flex justify-center items-center'>
-                                <span className='text-xs font-bold'>{favorited.length}</span>
+                                <span className='text-xs font-bold'>{favorites.length}</span>
                             </div>
                         )}
                     </li>
