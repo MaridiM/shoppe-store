@@ -11,9 +11,9 @@ interface IProps {}
 
 const Footer: FC<IProps> = () => {
     return (
-        <footer className='flex justify-between items-end border-t-2 border-t-light-gray h-40'>
-            <div>
-                <ul className='flex gap-x-10'>
+        <footer className='flex flex-col items-center h-auto lg:flex-row lg:items-end lg:h-40 justify-between border-t-2 border-t-light-gray'>
+            <div className='mt-12 lg:mt-0'>
+                <ul className='flex flex-col gap-y-3 justify-center items-center text-sm md:flex-row md:gap-x-10 lg:text-base'>
                     <li>
                         <Link href={paths.contact} className='leading-[1.69]'>
                             CONTACT
@@ -30,7 +30,7 @@ const Footer: FC<IProps> = () => {
                         </Link>
                     </li>
                 </ul>
-                <p className='mt-12'>
+                <p className='mt-6 text-center md:mt-12 lg:text-left '>
                     © 2021 Shelly.{' '}
                     <Link href={paths.term} className='text-dark-gray'>
                         Terms of use
@@ -41,7 +41,7 @@ const Footer: FC<IProps> = () => {
                     </Link>
                 </p>
             </div>
-            <div className='pb-[10px] w-[396px]'>
+            <div className='mt-6 lg:mt-0 pb-[10px] w-[396px]'>
                 <form className='relative'>
                     <Input
                         className='pr-8 border-black leading-[1.69] placeholder:text-dark-gray'
@@ -53,7 +53,7 @@ const Footer: FC<IProps> = () => {
                         <MoveRight size={25} />
                     </Button>
                 </form>
-                <ul className='flex justify-end gap-x-[30px] mt-[50px]'>
+                <ul className='flex justify-center lg:justify-end gap-x-[30px] mt-[50px]'>
                     <li>
                         <Link href='#'>
                             <LinkedinSVG

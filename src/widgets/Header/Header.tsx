@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { FC, useEffect } from 'react';
+import { FC } from 'react';
 import { ShoppingCart, Heart } from 'lucide-react';
 
 import { useAppContext } from '@/context';
