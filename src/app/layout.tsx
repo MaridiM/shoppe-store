@@ -20,16 +20,14 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <AppContextProvider>
-            <html lang='en'>
-                <body className={cn('not-scroll', inter.className)} suppressHydrationWarning={true}>
-                    <main className='flex flex-col min-h-screen py-12 px-4 m-auto max-w-[1280px]'>
-                        <Header />
-                        {children}
-                        <Footer />
-                    </main>
-                </body>
-            </html>
-        </AppContextProvider>
+        <html lang='en'>
+            <body className={cn('not-scroll', inter.className)} suppressHydrationWarning={true}>
+                <main className='flex flex-col min-h-screen py-12 px-4 m-auto max-w-[1280px]'>
+                    <Header />
+                    {children}
+                    <Footer />
+                </main>
+            </body>
+        </html>
     );
 }
