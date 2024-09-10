@@ -1,1 +1,1 @@
-export {default as PrivacyPolisPage } from './PrivacyPolicesPage'
+export { default as PrivacyPolicesScreen } from './PrivacyPolices';
