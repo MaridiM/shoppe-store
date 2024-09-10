@@ -18,6 +18,8 @@ const config = {
         base: '16px',
         lg: '18px',
         xl: '20px',
+        h1: '33px',
+        h2: '26px',
       },
       colors: {
         background: 'var(--background)',
