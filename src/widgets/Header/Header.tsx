@@ -1,10 +1,10 @@
 'use client';
 
 import Link from 'next/link';
-import { FC, useEffect } from 'react';
+import { FC } from 'react';
 import { ShoppingCart, Heart } from 'lucide-react';
 
-import { useAppContext } from '@/context';
+import { useAppContext } from '@/shared/lib/context';
 import { LogoSVG, SearchSVG, UserSVG } from '@/shared/assets/icons';
 
 import { paths } from '@/shared/config/roures';

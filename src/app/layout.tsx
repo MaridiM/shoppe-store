@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 
 import { Footer, Header } from '@/widgets';
-import { AppContextProvider } from '@/context';
+import { AppContextProvider } from '@/shared/lib/context';
 
 import './styles/globals.css';
 import { cn } from '@/shared/lib/utils';
