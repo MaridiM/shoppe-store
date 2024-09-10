@@ -41,8 +41,8 @@ const Footer: FC<IProps> = () => {
                     </Link>
                 </p>
             </div>
-            <div className='mt-6 lg:mt-0 pb-[10px] w-[396px]'>
-                <form className='relative'>
+            <div className='mt-6 lg:mt-0 pb-[10px] w-full max-w-[396px]'>
+                <form className='relative w-full'>
                     <Input
                         className='pr-8 border-black leading-[1.69] placeholder:text-dark-gray'
                         name='email'
