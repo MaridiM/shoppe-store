@@ -7,7 +7,7 @@ interface IProps {
 }
 
 const Container: FC<IProps> = ({ children, className }) => {
-    return <div className={cn('flex flex-grow pb-[250px]', className)}>{children}</div>;
+    return <div className={cn('flex flex-grow pb-[96px] md:pb-[250px]', className)}>{children}</div>;
 };
 
 export default Container;

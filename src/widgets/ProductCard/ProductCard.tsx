@@ -1,8 +1,10 @@
 'use client';
 
+import { useAppContext } from '@/shared/lib/context';
 import Image, { StaticImageData } from 'next/image';
 import { Button } from '@/shared/components';
 import { Eye, Heart, ShoppingCart } from 'lucide-react';
+import { useProductActions } from '@/shared/lib/hooks';
 
 import { FC, useEffect, useMemo, useState } from 'react';
 import { useProductStore } from '@/shared/lib/store';
