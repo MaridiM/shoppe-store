@@ -4,10 +4,10 @@ import Link from 'next/link';
 import { FC } from 'react';
 import { ShoppingCart, Heart } from 'lucide-react';
 
-import { useProductStore } from '@/store';
 import { LogoSVG, SearchSVG, UserSVG } from '@/shared/assets/icons';
 
 import { paths } from '@/shared/config/roures';
+import { useProductStore } from '@/shared/lib/store';
 
 interface IProps {}
 

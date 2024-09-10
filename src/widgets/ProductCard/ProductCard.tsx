@@ -3,9 +3,9 @@
 import Image, { StaticImageData } from 'next/image';
 import { Button } from '@/shared/components';
 import { Eye, Heart, ShoppingCart } from 'lucide-react';
-import { useProductStore } from '@/store';
 
 import { FC, useEffect, useMemo, useState } from 'react';
+import { useProductStore } from '@/shared/lib/store';
 
 interface IProps {
     id: number;
