@@ -42,7 +42,7 @@ const ProductCard: FC<IProps> = ({ id, img, title, price }) => {
 
     return (
         mounted && (
-            <div className='max-w-[380px] w-full'>
+            <div className='w-full'>
                 <div className='relative group rounded-lg cursor-pointer'>
                     <Image src={img} alt='product' priority={true} />
                     <div className='absolute rounded-lg inset-0 flex items-center justify-center gap-x-[30px] opacity-0 bg-light-gray hover:opacity-60 shadow-md transition-opacity duration-300 group-hover:opacity-60'>

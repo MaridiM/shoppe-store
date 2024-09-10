@@ -52,14 +52,14 @@ const HomePage: FC<IProps> = ({}) => {
                         alt='img'
                         priority={true}
                     />
-                    <div className='absolute top-32 left-10 md:top-56'>
-                        <h1 className='mb-4 font-medium text-2xl leading-[1.3] text-white md:text-[33px]'>
+                    <div className='absolute top-14 left-3 md:top-48 md:left-10'>
+                        <h1 className='mb-2 font-medium text-lg sm:text-[33px] leading-[1.3] text-white'>
                             Gold big hoops
                         </h1>
-                        <p className='mb-12 font-normal text-xl leading-[1.35] text-white md:text-[26px]'>
+                        <p className='text-xl mb-2 sm:mb-12 font-normal sm:text-[26px] leading-[1.35] text-white'>
                             $ 68,00
                         </p>
-                        <button className='w-40 h-10 text-base border-2 border-solid border-white text-white rounded-md font-bold md:text-xl md:w-[193px] md:h-[53px]'>
+                        <button className='w-24 h-8 text-sm sm:w-[193px] sm:h-[53px] border-2 border-solid border-white text-white rounded-md sm:text-xl font-bold'>
                             View Product
                         </button>
                     </div>
@@ -71,14 +71,14 @@ const HomePage: FC<IProps> = ({}) => {
                         alt='img'
                         priority={true}
                     />
-                    <div className='absolute top-56 left-10'>
-                        <h1 className='mb-4 font-medium text-[33px] leading-[1.3] text-white'>
+                    <div className='absolute top-14 left-3 md:top-48 md:left-10'>
+                        <h1 className='mb-2 font-medium text-lg sm:text-[33px] leading-[1.3] text-white'>
                             Gold big hoops
                         </h1>
-                        <p className='mb-12 font-normal text-[26px] leading-[1.35] text-white'>
+                        <p className='text-xl mb-2 sm:mb-12 font-normal sm:text-[26px] leading-[1.35] text-white'>
                             $ 68,00
                         </p>
-                        <button className='w-[193px] h-[53px] border-2 border-solid border-white text-white rounded-md text-xl font-bold'>
+                        <button className='w-24 h-8 text-sm sm:w-[193px] sm:h-[53px] border-2 border-solid border-white text-white rounded-md sm:text-xl font-bold'>
                             View Product
                         </button>
                     </div>
@@ -90,21 +90,21 @@ const HomePage: FC<IProps> = ({}) => {
                         alt='img'
                         priority={true}
                     />
-                    <div className='absolute top-56 left-10'>
-                        <h1 className='mb-4 font-medium text-[33px] leading-[1.3] text-white'>
+                    <div className='absolute top-14 left-3 md:top-48 md:left-10'>
+                        <h1 className='mb-2 font-medium text-lg sm:text-[33px] leading-[1.3] text-white'>
                             Gold big hoops
                         </h1>
-                        <p className='mb-12 font-normal text-[26px] leading-[1.35] text-white'>
+                        <p className='text-xl mb-2 sm:mb-12 font-normal sm:text-[26px] leading-[1.35] text-white'>
                             $ 68,00
                         </p>
-                        <button className='w-[193px] h-[53px] border-2 border-solid border-white text-white rounded-md text-xl font-bold'>
+                        <button className='w-24 h-8 text-sm sm:w-[193px] sm:h-[53px] border-2 border-solid border-white text-white rounded-md sm:text-xl font-bold'>
                             View Product
                         </button>
                     </div>
                 </SplideSlide>
             </Splide>
 
-            <section className='mt-16 w-full mx-auto'>
+            <section className='mt-8 sm:mt-16 w-full mx-auto'>
                 <div className='flex justify-between items-center flex-col xl:flex-row'>
                     <h2 className='text-[33px] font-semibold leading-[1.3] mb-4 md:mb-0 md:text-[48px] md:leading-[1.2]'>
                         Shop The Latest
@@ -113,7 +113,7 @@ const HomePage: FC<IProps> = ({}) => {
                         View All
                     </Link>
                 </div>
-                <div className='grid grid-cols-auto-fit-380 justify-center gap-[54px] mt-10'>
+                <div className='grid grid-cols-auto-fit-300 sm:grid-cols-auto-fit-380 justify-center gap-[54px] mt-10'>
                     {products.map((item) => (
                         <ProductCard key={item.id} {...item} />
                     ))}

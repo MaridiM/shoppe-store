@@ -22,6 +22,7 @@ const config = {
 
             gridTemplateColumns: {
                 'auto-fit-380': 'repeat(auto-fit, 380px)',
+                'auto-fit-300': 'repeat(auto-fit, 300px)',
             },
             colors: {
                 background: 'var(--background)',
