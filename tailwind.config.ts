@@ -14,10 +14,13 @@ const config = {
     },
     extend: {
       fontSize: {
+        s: '12px',
         sm: '14px',
         base: '16px',
         lg: '18px',
         xl: '20px',
+        xxl: '26px',
+        xxxl: '33px'
       },
       colors: {
         background: 'var(--background)',
